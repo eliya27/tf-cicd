@@ -7,11 +7,7 @@ pipeline{
         TF_HOME = tool('terraform')
         TF_IN_AUTOMATION = "true"
         PATH = "$TF_HOME:$PATH"
-        ARM_SUBSCRIPTION_ID='0fd4cead-96dd-4544-af2b-c27c3bf1b7e9'
-        ARM_CLIENT_ID='67bae972-9160-4eea-869f-f2eae65d3446'
-        ARM_CLIENT_SECRET='Sog8Q~VfHTNRhBmrZJ3JezHDxKJQ_21xKegiTc-J'
-        ARM_TENANT_ID='89dc1d2c-a8dd-4803-b8ef-1c8963b09b20'
-        ARM_ACCESS_KEY='sp=racwdl&st=2022-05-18T21:17:52Z&se=2023-05-19T05:17:52Z&sv=2020-08-04&sr=c&sig=aaZUdWyrO1Vg39RN8yQRQhKiLMrpvHo5gGwBlO4vqjM%3D'
+        
     }
     stages {
     
@@ -25,12 +21,12 @@ pipeline{
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                                 
                         echo "Initialising Terraform"
-                        terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
+                        terraform init -backend-config="access-key=$ARM_ACCESS_KEY"
                         """
                            }
                     }
@@ -47,7 +43,7 @@ pipeline{
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                                 
@@ -68,7 +64,7 @@ pipeline{
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                         
@@ -99,7 +95,7 @@ pipeline{
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
 
                         sh """
                         echo "Applying the plan"
