@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rg-group" {
-        name = var.rs_group_name
-        location = var.rs_group_location
+        name = var.resource_group_name
+     location = var.resource_group_location
 }
