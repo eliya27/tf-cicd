@@ -26,7 +26,7 @@ pipeline{
                         
                         echo "********Initialising Terraform********"
                         sh """
-                        terraform init -backend-config="backend-config.txt"
+                        terraform init 
                         """
                         
                         echo "**********Terraform sucessful initialized*******"
