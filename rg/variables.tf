@@ -9,3 +9,5 @@ variable "resource_group_location" {
     description = "Rs location"
     type = string
     default = "eastus2"
+    
+}    
