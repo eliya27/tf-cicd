@@ -39,7 +39,7 @@ provider "azuread" {
 
 #------resource-group module---
 module "rg-module" {
-       source = "./rg/rg-module"
+       source = "./azure/rg-module"
 }
 
 
