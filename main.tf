@@ -38,8 +38,8 @@ provider "azuread" {
 }
 
 #------resource-group module---
-module "rs-group" {
-       source = "./rg"
+module "rg-module" {
+       source = "./rg/rg-module"
        
 }
 
