@@ -1,7 +1,9 @@
-variable "resource_group_name"  {
-  type = string
+#---------Resource-group variables-----
+variable "resource_group_name" {
+    description = "Resource group name"
+    type = string
 }
 
-variable "resource_group_location"  {
-  type = string
-}
+variable "resource_group_location" {
+    description = "Rs location"
+    type = string
