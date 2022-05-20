@@ -23,11 +23,13 @@ pipeline{
                     tenantIdVariable: 'ARM_TENANT_ID'
                 ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
                         
+                        
+                        echo "********Initialising Terraform********"
                         sh """
-                                
-                        echo "Initialising Terraform"
                         terraform init -backend-config="access-key=$ARM_ACCESS_KEY"
                         """
+                        
+                        echo "**********Terraform sucessful initialized*******"
                            }
                     }
              }
@@ -45,10 +47,13 @@ pipeline{
                     tenantIdVariable: 'ARM_TENANT_ID'
                 ), string(credentialsId: 'access-key', variable: 'ARM_ACCESS_KEY')]) {
                         
+                        echo "********Initialising Terraform validation********"
                         sh """
                                 
                         terraform validate
                         """
+                        
+                        echo "**********Terraform sucessful validated*******"
                            }
                     }
              }
