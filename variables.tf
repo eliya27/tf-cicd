@@ -25,5 +25,3 @@ variable "tenant_id" {
 }
 
 
-}
-
