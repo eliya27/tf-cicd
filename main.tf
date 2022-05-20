@@ -42,6 +42,11 @@ module "rg-module" {
        source = "./azure/rg-module"
 }
 
+module "aks" {
+     source    =     "./azure/aks"
+     env       =     "dev"
+ }
+
 
 // module "windows-server" {
 //     source  =   "./azure/WindowsServer2019"
@@ -53,10 +58,7 @@ module "rg-module" {
 
 
 
-// module "aks" {
-//     source    =     "./azure/aks"
-//     env       =     "dev"
-// }
+ 
 
 
 
