@@ -25,12 +25,13 @@ variable "tenant_id" {
 }
 
 #---------Resource-group variables-----
-variable "rs_group_name" {
+variable "resource_group_name" {
     description = "Resource group name"
     type = string
 }
 
-variable "rs_group_location" {
+variable "resource_group_location" {
     description = "Rs location"
     type = string
 }
+
