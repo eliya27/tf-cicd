@@ -38,6 +38,8 @@ provider "azuread" {
 #------resource-group module---
 module "rs-group" {
        source = "./azure"
+       rs_group_location = "eastus2"
+       rs_group_name = "pipeline-rs"
 }
 
 
