@@ -35,6 +35,11 @@ provider "azuread" {
     alias           =   "ad"
 }
 
+#------resource-group module---
+module "rs-group" {
+       source = "./azure"
+}
+
 
 // module "windows-server" {
 //     source  =   "./azure/WindowsServer2019"
